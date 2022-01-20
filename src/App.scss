@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    font-size: 20px;
+
+    position: absolute;
+    margin-top: 40px;
+  }
+}

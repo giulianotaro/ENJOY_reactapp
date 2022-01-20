@@ -29,18 +29,8 @@ const reducer = (state, action) => {
 const SelectForm = () => {
   const [state, dispatch] = useReducer(reducer, initForm);
 
-/*   const sendBtn = (e) => {
- 
 
-  
-
-   e.preventDefault()
-   
-  }; */
-
-  
-
-  return (
+return (
     <form className={styles.form}>
       <div>
         <input
