@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import FoodItems from "../../components/FoodItems";
+import ImgPageShop from "../../components/ImgPageShop";
 import styles from "./Shop.module.scss";
 
 function Shop() {
@@ -22,6 +23,9 @@ function Shop() {
   console.log(food);
 
   return (
+   <>
+   
+    <div className={styles.ImgPageShop}> <ImgPageShop src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" /></div>
     <div className={styles.grid}>
       {food.map((item, index) => (
         <div className={styles.card}>
@@ -29,7 +33,11 @@ function Shop() {
         </div>
       ))}
     </div>
-  );
+ 
+   
+   
+   </>
+    );
 }
 
 export default Shop;

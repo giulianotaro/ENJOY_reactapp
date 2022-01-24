@@ -4,6 +4,15 @@ ul {
         justify-content: space-evenly;
         list-style: none;
         font-size: 20px;
-        text-decoration: none;
+        color: black;
+       
+        a {text-decoration: none;
+           color: black;
+        
+        &:hover {
+                background-color: lightblue;
+                border-radius: 10px;
+                
+        }}
  
 }
