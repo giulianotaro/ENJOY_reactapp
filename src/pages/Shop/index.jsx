@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import FoodItems from "../../components/FoodItems";
+import styles from "./Shop.module.scss";
 
 function Shop() {
   const APP_KEY = " 463fd4d541f9c5bf56bde2f5d62f2309 ";
 
   const APP_ID = "d375aa7b";
 
-  const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=apple&nutrition-type=cooking`;
+  const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=food&fast-food=cooking`;
 
   const [food, setFood] = useState([]);
 
@@ -21,15 +22,12 @@ function Shop() {
   console.log(food);
 
   return (
-    <div>
+    <div className={styles.grid}>
       {food.map((item, index) => (
-
-
-        <FoodItems key={index} title={item.food.label} />
-
-
+        <div className={styles.card}>
+          <FoodItems key={index} title={item.food.label} />
+        </div>
       ))}
-      
     </div>
   );
 }

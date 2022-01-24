@@ -1,11 +1,9 @@
-.menu {
-  display: flex;
-  justify-content: space-between;
-
-  ul {
-    font-size: 20px;
-
-    position: absolute;
-    margin-top: 40px;
-  }
+ul { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        font-size: 20px;
+        text-decoration: none;
+ 
 }
