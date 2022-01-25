@@ -25,13 +25,26 @@ function Shop() {
   return (
    <>
    
-    <div className={styles.ImgPageShop}> <ImgPageShop src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" /></div>
+    <div className={styles.ImgPageShop} >
+      <ImgPageShop src="https://images.unsplash.com/photo-1571211905393-6de67ff8fb61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+     
+
+      
+      <ImgPageShop src="https://images.unsplash.com/photo-1585735119301-232c1633d439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
+      
+
+    
+      <ImgPageShop src="https://images.unsplash.com/photo-1582703193229-4306f478478b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+      </div>
+
     <div className={styles.grid}>
+
       {food.map((item, index) => (
         <div className={styles.card}>
           <FoodItems key={index} title={item.food.label} />
         </div>
       ))}
+
     </div>
  
    
