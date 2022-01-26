@@ -6,7 +6,7 @@ const Home = () => (
   <div>
   
   <ImgCarousel />
-  <CityRef />
+ 
   
   </div>
 );
