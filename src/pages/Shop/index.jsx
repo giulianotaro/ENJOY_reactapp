@@ -7,31 +7,41 @@ import styles from "./Shop.module.scss";
 
 function Shop() {
   const [food, setFood] = useState([]);
-  const [ingr, setIngr] = useState("");
+  const [ingredient, setIngredient] = useState(false);
   const [inputText, setInputText] = useState("");
 
   const APP_KEY = " 463fd4d541f9c5bf56bde2f5d62f2309 ";
 
   const APP_ID = "d375aa7b";
 
-  const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=food&fast-food=cooking`;
+  const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=${ingredient}&fast-food=cooking`;
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
 
-  const handleIngr = (e) => {
+  const submitIngrHandler = (e) => {
     e.preventDefault();
-    setIngr(inputText);
+
+    setIngredient(inputText);
+
+    setInputText("");
   };
 
-  console.log(ingr);
-
-  useEffect(() => {
+  const fetchFood = () => {
     axios.get(baseURL).then((res) => {
       setFood(res.data.hints);
+      console.log(res.data.hints);
     });
-  }, []);
+  };
+
+  useEffect(() => {
+    const isFood = () => {
+      return ingredient ? fetchFood() : "";
+    };
+
+    return isFood();
+  }, [ingredient]);
 
   return (
     <>
@@ -43,14 +53,19 @@ function Shop() {
         <ImgPageShop src="https://images.unsplash.com/photo-1582703193229-4306f478478b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
       </div>
 
-      <div className={styles.grid}>
-        <input
-          onChange={inputTextHandler}
-          value={inputText}
-          placeholder="Inserisci ingrediente"
-        ></input>
+      <div className={styles.input_div}>
+        <form onSubmit={submitIngrHandler}>
+          <label>Ingrediente:</label>
+          <input
+            type="search"
+            onChange={inputTextHandler}
+            value={inputText}
+            placeholder="Inserisci ingrediente"
+          ></input>
+        </form>
+      </div>
 
-        <button onSubmit={handleIngr}></button>
+      <div className={styles.grid}>
         {food.map((item, index) => (
           <div className={styles.card}>
             <FoodItems key={index} title={item.food.label} />

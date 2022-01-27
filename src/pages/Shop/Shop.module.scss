@@ -42,3 +42,19 @@
     }
   }
 }
+
+.input_div {
+
+  display: flex;
+  justify-content: center;
+
+  input {
+    margin-left: 20px;
+    margin-top: 200px;
+    border: none;
+    border-bottom: 1px solid #0000006c;
+    padding: 2px 5px;
+    outline: none;
+  }
+
+}

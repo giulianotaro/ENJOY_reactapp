@@ -3,7 +3,7 @@ const ImgPageShop = (props) => {
 return (
 
     <div>
-        <img src={props.src} /> </div>
+        <img src={props.src} alt="imgshop" /> </div>
 )
 
 } 
