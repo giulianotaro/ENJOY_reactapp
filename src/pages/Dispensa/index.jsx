@@ -3,9 +3,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import FoodItems from "../../components/FoodItems";
 import ImgPageShop from "../../components/ImgPageShop";
-import styles from "./Shop.module.scss";
+import { Link } from "react-router-dom";
+import styles from "./Dispensa.module.scss";
 
-function Shop() {
+function Dispensa() {
   const [food, setFood] = useState([]);
   const [ingredient, setIngredient] = useState(false);
   const [inputText, setInputText] = useState("");
@@ -55,25 +56,29 @@ function Shop() {
 
       <div className={styles.input_div}>
         <form onSubmit={submitIngrHandler}>
-          <label>Ingrediente:</label>
+          <label>I miei ingredienti:</label>
           <input
             type="search"
             onChange={inputTextHandler}
             value={inputText}
-            placeholder="Inserisci ingrediente"
+            placeholder="Inserisci ingredienti"
           ></input>
         </form>
       </div>
 
       <div className={styles.grid}>
-        {food.map((item, index) => (
+      
+        {food.map((item, index) => (  
+        <Link key={index} to="/">
           <div className={styles.card}>
-            <FoodItems key={index} title={item.food.label} />
+            <FoodItems  title={item.food.label} />
           </div>
+         </Link>  
         ))}
+       
       </div>
     </>
   );
 }
 
-export default Shop;
+export default Dispensa;

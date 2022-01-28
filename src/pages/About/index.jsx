@@ -15,7 +15,7 @@ function About() {
 
     <>
     <div className={styles.map}>
-      <Map SameSite="None" view={{ center: [0, 0], zoom: 3, coordinate: [7.85, 47.983333] }}>
+      <Map SameSite="None" view={{ center: [0, 0], zoom: 3 }}>
         <Layers>
           <layer.Tile></layer.Tile>
         </Layers>

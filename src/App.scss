@@ -12,9 +12,16 @@ ul {
            color: black;
         
         &:hover {
+
+                
                 background-color: lightblue;
                 border-radius: 10px;
+                padding: 10px;
+                
                 
         }}
  
 }
+
+#root {
+height: 20px;}

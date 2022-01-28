@@ -1,37 +1,31 @@
 import { Link, Routes, Route } from "react-router-dom";
 import styles from "./App.scss";
 import Home from "./pages/Home";
-import Shop from "./pages/Shop";
+import Dispensa from "./pages/Dispensa";
 import About from "./pages/About";
 
 function App() {
   return (
     <div>
-
-<header>
-      <div className={styles.menu}>
-        <ul>
+      <div>
+        <ul className={styles.ul}>
           <li>
-
             <Link to="/">Home</Link>
-            </li>
-            <li>
-            <Link to="/shop">Shop</Link>
-            </li>
-            <li>
+          </li>
+          <li>
+            <Link to="/dispensa">Dispensa</Link>
+          </li>
+          <li>
             <Link to="/about">About</Link>
           </li>
         </ul>
-        
       </div>
-      </header>
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/dispensa" element={<Dispensa />} />
         <Route path="/about" element={<About />} />
       </Routes>
-     
     </div>
   );
 }
