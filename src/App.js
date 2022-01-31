@@ -2,7 +2,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import styles from "./App.scss";
 import Home from "./pages/Home";
 import Dispensa from "./pages/Dispensa";
-import About from "./pages/About";
+import ListaSpesa from "./pages/Lista spesa";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Link to="/dispensa">Dispensa</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/listaspesa">Lista Spesa</Link>
           </li>
         </ul>
       </div>
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dispensa" element={<Dispensa />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/listaspesa" element={<ListaSpesa />} />
       </Routes>
     </div>
   );
