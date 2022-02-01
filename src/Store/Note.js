@@ -1,12 +1,15 @@
 import { ListGroup, Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { removeProduct} from './actions';
+/* import 'bootstrap/dist/css/bootstrap.min.css'; */
 
  const DispatchProduct = ({ note }) => {
 
     const dispatch = useDispatch();
   
-    const remove = () => dispatch(removeProduct(note.id));
+    const remove = () => dispatch(removeProduct(note.id)) ; if (note.product === "") return (removeProduct) ;
+
+    
   
     
     

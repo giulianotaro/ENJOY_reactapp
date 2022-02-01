@@ -14,7 +14,7 @@ const ImgCarousel = () => {
 
   return (
     <div>
-      <h1>Enjoy.</h1>
+      <h1 >Enjoy.</h1>
       <p>Fast, comfortable</p>
       <div className={styles.carousel} ref={carouselref}>
         <div className={styles.wrapper}>

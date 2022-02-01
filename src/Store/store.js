@@ -13,13 +13,17 @@ const initState = {
 
 const listReducer = (state, action) => {
   switch (action.type) {
+
+  
+
     case "add":
       return {
         shopList: [...state.shopList, action.payload],
       };
+
     case "remove":
       return {
-        shopList: state.shopList.filter((item) => item.id !== action.payload),
+        shopList: state.shopList.filter((item) => item.id !== action.payload), 
       };
 
     default:

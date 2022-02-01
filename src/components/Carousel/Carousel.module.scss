@@ -1,3 +1,10 @@
+h1 { text-align: center;
+     font-size: 100px;}
+
+p { text-align: center;
+    margin-top: -60px;}
+
+
 .carousel {
   overflow: hidden;
   margin: 50px;
@@ -41,11 +48,9 @@ img {
   left: calc(100vw - 50px);
 }
 
-h1 { text-align: center;
-     font-size: 100px;}
 
-p { text-align: center;
-    margin-top: -60px;}
+
+
 /* @media only screen and (max-width: 768px) {
   .carousel {
     overflow-x: scroll;
