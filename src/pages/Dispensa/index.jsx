@@ -29,6 +29,8 @@ function Dispensa() {
     setInputText("");
   };
 
+  
+ useEffect(() => {
   const fetchFood = () => {
     axios.get(baseURL).then((res) => {
       setFood(res.data.hints);
@@ -36,7 +38,7 @@ function Dispensa() {
     });
   };
 
-  useEffect(() => {
+ 
     const isFood = () => {
       return ingredient ? fetchFood() : "";
     };
