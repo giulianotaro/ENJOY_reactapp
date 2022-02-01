@@ -6,16 +6,34 @@ import ImgPageShop from "../../components/ImgPageShop";
 import { Link } from "react-router-dom";
 import styles from "./Dispensa.module.scss";
 
+//eslint-disable-next-line react-hooks/exhaustive-deps
+
 function Dispensa() {
   const [food, setFood] = useState([]);
   const [ingredient, setIngredient] = useState(false);
   const [inputText, setInputText] = useState("");
 
-  const APP_KEY = " 463fd4d541f9c5bf56bde2f5d62f2309 ";
+  useEffect(() => {
+    
+    const APP_KEY = " 463fd4d541f9c5bf56bde2f5d62f2309 ";
 
-  const APP_ID = "d375aa7b";
+    const APP_ID = "d375aa7b";
 
-  const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=${ingredient}&fast-food=cooking`;
+    const baseURL = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=${ingredient}&fast-food=cooking`;
+
+    const fetchFood = () => {
+      axios.get(baseURL).then((res) => {
+        setFood(res.data.hints);
+        console.log(res.data.hints);
+      });
+    };
+
+    const isFood = () => {
+      return ingredient ? fetchFood() : "";
+    };
+
+    return isFood();
+  }, [ingredient]);
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -28,24 +46,6 @@ function Dispensa() {
 
     setInputText("");
   };
-
-  
- useEffect(() => {
-  const fetchFood = () => {
-    axios.get(baseURL).then((res) => {
-      setFood(res.data.hints);
-      console.log(res.data.hints);
-    });
-  };
-
- 
-    const isFood = () => {
-      return ingredient ? fetchFood() : "";
-    };
-
-    return isFood();
-  }, [ingredient]);
-
   return (
     <>
       <div className={styles.ImgPageShop}>
@@ -69,15 +69,13 @@ function Dispensa() {
       </div>
 
       <div className={styles.grid}>
-      
-        {food.map((item, index) => (  
-        <Link key={index} to="/">
-          <div className={styles.card}>
-            <FoodItems  title={item.food.label} />
-          </div>
-         </Link>  
+        {food.map((item, index) => (
+          <Link key={index} to="/">
+            <div className={styles.card}>
+              <FoodItems title={item.food.label} />
+            </div>
+          </Link>
         ))}
-       
       </div>
     </>
   );
