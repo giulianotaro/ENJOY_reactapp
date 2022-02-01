@@ -1,18 +1,28 @@
 import React from "react";
-import TextHome from "../../components/TextHome";
+import styles from "./Listaspesa.module.scss";
+import { HiOutlineShoppingCart} from "react-icons/hi";
 import Note from "../../Store/Notes";
 
 const Listaspesa = () => {
   return (
-    <div>
-      
-      <TextHome
-        Titlehome="LISTA SPESA"
-        Paragraphhome="1. Dalla lista sottostante scegli gli ingredienti, questi alla fine formeranno la tua lista della spesa.
-      2. Seleziona il giorno e l’ora dal Calendario e noi ti manderemo una email per ricordarti cosa comprare.
-      3. Enjoy ! "
-      /> 
+    <div className={styles.Listaspesa}>
+
+      <div className={styles.divtext}>
+      <h2 className={styles.h2} >La mia spesa</h2>
+      <p className={styles.p}>
+        {" "}
+        · Scrivi gli ingredienti che ti servono, questi alla fine formeranno la
+        tua lista della spesa. <br></br>· Seleziona il giorno e l’ora dal
+        Calendario, ti manderemo una mail con la tua lista e ti ricorderemo di passare dal supermercato.{" "}
+        <br></br>· Enjoy !{" "}
+      </p>
       <Note />
+</div>
+
+<div>
+      <HiOutlineShoppingCart className={styles.svg} />
+</div>
+
     </div>
   );
 };
