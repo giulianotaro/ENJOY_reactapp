@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+
 .Listaspesa { 
 
 display: flex;
 align-items: center;
 justify-content: space-around;  
 
-.h2 {
+.divtext {
+  width: 50%;
+
+.h3 {
   font-size: 40px;
   margin: 150px 0px -50px 20px;
+  font-family: "Poppins", sans-serif;
 }
+
+
 
 .p {
   font-size: 20px;
   text-align: left;
   margin: 150px 0px 0px 20px;
-  line-height: 30px;
+  line-height: 50px;
+  font-family: "Montserrat", sans-serif;
 }
+}
+
 
 span {
   font-size: 20px;
@@ -33,5 +46,6 @@ input {
 
 
 .svg {font-size: 200px;
-color: lightblue;}
+color: lightblue;
+margin-top: 120px;}
 

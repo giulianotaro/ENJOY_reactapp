@@ -8,7 +8,7 @@ const Listaspesa = () => {
     <div className={styles.Listaspesa}>
 
       <div className={styles.divtext}>
-      <h2 className={styles.h2} >La mia spesa</h2>
+      <h3 className={styles.h3} >La mia spesa</h3>
       <p className={styles.p}>
         {" "}
         · Scrivi gli ingredienti che ti servono, questi alla fine formeranno la

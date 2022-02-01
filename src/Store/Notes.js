@@ -34,7 +34,7 @@ const uuid = require('uuid-v4');
     
           <InputGroup size="sm" className="mb-3">
             <InputGroup.Text id="inputGroup-sizing-sm">
-              Insert a note
+              Inserisci un prodotto 
             </InputGroup.Text>
             
             <FormControl
