@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ENJOY_reactapp/static/css/main.5da20b06.css",
+    "main.js": "/ENJOY_reactapp/static/js/main.6c9445ce.js",
+    "static/js/787.d58ffa2b.chunk.js": "/ENJOY_reactapp/static/js/787.d58ffa2b.chunk.js",
+    "index.html": "/ENJOY_reactapp/index.html",
+    "main.5da20b06.css.map": "/ENJOY_reactapp/static/css/main.5da20b06.css.map",
+    "main.6c9445ce.js.map": "/ENJOY_reactapp/static/js/main.6c9445ce.js.map",
+    "787.d58ffa2b.chunk.js.map": "/ENJOY_reactapp/static/js/787.d58ffa2b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5da20b06.css",
+    "static/js/main.6c9445ce.js"
+  ]
+}
