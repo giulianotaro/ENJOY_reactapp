@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ENJOY_reactapp/static/css/main.f463b632.css",
-    "main.js": "/ENJOY_reactapp/static/js/main.3059ff87.js",
+    "main.js": "/ENJOY_reactapp/static/js/main.3f8d3875.js",
     "static/js/787.d58ffa2b.chunk.js": "/ENJOY_reactapp/static/js/787.d58ffa2b.chunk.js",
     "index.html": "/ENJOY_reactapp/index.html",
     "main.f463b632.css.map": "/ENJOY_reactapp/static/css/main.f463b632.css.map",
-    "main.3059ff87.js.map": "/ENJOY_reactapp/static/js/main.3059ff87.js.map",
+    "main.3f8d3875.js.map": "/ENJOY_reactapp/static/js/main.3f8d3875.js.map",
     "787.d58ffa2b.chunk.js.map": "/ENJOY_reactapp/static/js/787.d58ffa2b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f463b632.css",
-    "static/js/main.3059ff87.js"
+    "static/js/main.3f8d3875.js"
   ]
 }
