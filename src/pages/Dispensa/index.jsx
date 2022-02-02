@@ -36,7 +36,8 @@ function Dispensa() {
   }, [ingredient]);
 
   const inputTextHandler = (e) => {
-    setInputText(e.target.value);
+    setInputText(e.target.value)
+    
   };
 
   const submitIngrHandler = (e) => {
@@ -72,7 +73,7 @@ function Dispensa() {
         {food.map((item, index) => (
           <Link key={index} to="/">
             <div className={styles.card}>
-              <FoodItems title={item.food.label} />
+              <FoodItems title={item.food.label} src={item.food.image}  />
             </div>
           </Link>
         ))}

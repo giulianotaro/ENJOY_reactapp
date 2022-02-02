@@ -4,6 +4,7 @@ import { HiOutlineShoppingCart} from "react-icons/hi";
 import Note from "../../Store/Notes";
 
 const Listaspesa = () => {
+  
   return (
     <div className={styles.Listaspesa}>
 

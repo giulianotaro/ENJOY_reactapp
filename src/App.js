@@ -2,7 +2,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import styles from "./App.scss";
 import Home from "./pages/Home";
 import Dispensa from "./pages/Dispensa";
-import ListaSpesa from "./pages/Lista spesa";
+import Listaspesa from "./pages/Lista spesa";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div>
         <ul className={styles.ul}>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/dispensa">Dispensa</Link>
@@ -22,9 +22,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/dispensa" element={<Dispensa />} />
-        <Route path="/listaspesa" element={<ListaSpesa />} />
+        <Route path="/listaspesa" element={<Listaspesa />} />
       </Routes>
     </div>
   );

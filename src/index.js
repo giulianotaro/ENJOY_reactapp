@@ -9,14 +9,18 @@ import { store } from "./Store/store";
 
 
 ReactDOM.render(
-  
+   <React.StrictMode>
+
   <Provider store={store}>
-    <React.StrictMode>
+   
       <Router>
         <App />
       </Router>
-    </React.StrictMode>
-  </Provider>,
+    
+  </Provider>
+  
+ </React.StrictMode>,
+ 
   document.getElementById("root")
 );
 
