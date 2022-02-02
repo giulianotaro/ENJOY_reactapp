@@ -7,20 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./Store/store";
 
-
 ReactDOM.render(
-   <React.StrictMode>
-
-  <Provider store={store}>
-   
-      <Router>
+  <React.StrictMode>
+    <Router>
+      <Provider store={store}>
         <App />
-      </Router>
-    
-  </Provider>
-  
- </React.StrictMode>,
- 
+      </Provider>
+    </Router>
+  </React.StrictMode>,
+
   document.getElementById("root")
 );
 
