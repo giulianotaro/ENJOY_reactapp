@@ -7,12 +7,16 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./Store/store";
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Provider store={store}>
-        <App />
-      </Provider>
+   
+        <Provider store={store}>
+          <App />
+        </Provider>
+
     </Router>
   </React.StrictMode>,
 

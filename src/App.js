@@ -10,7 +10,7 @@ function App() {
       <div>
         <ul className={styles.ul}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/ENJOY_reactapp">Home</Link>
           </li>
           <li>
             <Link to="/dispensa">Dispensa</Link>
@@ -22,7 +22,7 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/ENJOY_reactapp" element={<Home />} />
         <Route path="/dispensa" element={<Dispensa />} />
         <Route path="/listaspesa" element={<Listaspesa />} />
       </Routes>
