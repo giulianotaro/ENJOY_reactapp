@@ -51,13 +51,13 @@ img {
 
 
 
-/* @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 900px) {
   .carousel {
     overflow-x: scroll;
   }
 
   .carousel::after {
-    content: "-->";
+    content: "·";
     position: absolute;
     top: 50vh;
     right: 0;
@@ -66,4 +66,10 @@ img {
   .carousel__buttons {
     display: none;
   }
-} */
+
+  h1 { text-align: center;
+    font-size: 60px;}
+
+    p { text-align: center;
+      margin-top: -30px;}
+} 
